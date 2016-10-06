@@ -1,0 +1,234 @@
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*adding a black bg to the body to make things clearer*/
+body {
+    /*background: black;*/
+}
+
+canvas {
+    display: block;
+    /*background: black;*/
+}
+
+.hidden {
+    display: none !important;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.skyscraper-bg-wrap {
+    width: 1440px;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-image: url('../img/1.jpg');
+}
+
+.skyscraper-bg {
+    width: 1440px;
+    height: 900px;
+    position: relative;
+}
+
+.skyscraper-canvas {
+    position: absolute;
+}
+
+.skyscraper-01-01 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 830px;
+    top: 119px;
+    /*width: 184px;*/
+    /*height: 492px;*/
+    transform: rotate(-1deg) skewY(-18deg);
+}
+
+.skyscraper-01-02 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 1022px;
+    top: 98px;
+    /*width: 109px;*/
+    /*height: 492px;*/
+    transform: rotate(-1.4deg) skewY(14deg);
+}
+
+.skyscraper-01-03 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 1243px;
+    top: 249px;
+    /*width: 167px;*/
+    /*height: 554px;*/
+    transform: rotate(-2deg);
+}
+
+.skyscraper-01-04 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 668px;
+    top: 249px;
+    /*width: 139px;*/
+    /*height: 554px;*/
+    transform: skewY(8deg);
+}
+
+.skyscraper-01-05 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 573px;
+    top: 253px;
+    /*width: 95px;*/
+    /*height: 554px;*/
+    transform: skewY(-16deg);
+}
+
+.skyscraper-01-06 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 370px;
+    top: 135px;
+    /*width: 128px;*/
+    /*height: 554px;*/
+    transform: skewY(8deg) rotate(.7deg);
+}
+
+.skyscraper-01-07 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 274px;
+    top: 177px;
+    /*width: 47px;*/
+    /*height: 554px;*/
+    transform: skewY(-21deg);
+}
+
+.skyscraper-01-08 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 101px;
+    top: 374px;
+    /*width: 169px;*/
+    /*height: 255px;*/
+    transform: skewY(7deg) rotate(2deg);
+}
+
+.skyscraper-01-09 {
+    /*background-color: rgba(256, 256, 256, .3);*/
+    left: 46px;
+    top: 368px;
+    /*width: 47px;*/
+    /*height: 255px;*/
+    transform: skewY(-20deg) rotate(2deg);
+}
+
+.variables-of-skyscrapers {
+    background-color: rgba(256, 256, 256, .5);
+    position: absolute;
+    display: inline-block;
+    width: 500px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.variables-of-skyscrapers .desc {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.variables-of-skyscrapers .field {
+    display: inline-block;
+    width: 55%;
+    vertical-align: middle;
+}
+
+.variables-of-skyscrapers .value {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+    width: 9%;
+    margin-left: 1%;
+    height: 17px;
+    text-align: center;
+}
+
+.variables-of-skyscrapers .variable-block {
+    margin-bottom: 15px;
+}
+
+.variables-of-skyscrapers.right {
+    right: 0;
+}
+
+.variables-of-skyscrapers.left {
+    left: 0;
+}
+
+.variables-of-skyscrapers .reset-button {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.variables-of-skyscrapers .reset-button:hover {
+    background-color: #cccccc;
+}
+
+.position-label {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.position-label:hover {
+    background-color: #cccccc;
+}
+
+
+#position-left:checked ~ .position-label-left,
+#position-right:checked ~ .position-label-right {
+    background-color: #aaaaaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

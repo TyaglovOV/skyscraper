@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/rain.css">
+</head>
+<body>
+<div class="skyscraper-bg-wrap">
+  <div class="skyscraper-bg" id="skyscraper-field">
+
+    <canvas class="skyscraper-01-01 skyscraper-canvas"
+            id="skyscraper-01-01"
+            data-width="184"
+            data-height="592"
+            data-font-size="10"
+            data-direction="right"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-02 skyscraper-canvas"
+            id="skyscraper-01-02"
+            data-width="109"
+            data-height="592"
+            data-font-size="10"
+            data-direction="right"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-03 skyscraper-canvas"
+            id="skyscraper-01-03"
+            data-width="167"
+            data-height="554"
+            data-font-size="10"
+            data-direction="right"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-04 skyscraper-canvas"
+            id="skyscraper-01-04"
+            data-width="139"
+            data-height="554"
+            data-font-size="10"
+            data-direction="right"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-05 skyscraper-canvas"
+            id="skyscraper-01-05"
+            data-width="95"
+            data-height="554"
+            data-font-size="10"
+            data-direction="left"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-06 skyscraper-canvas"
+            id="skyscraper-01-06"
+            data-width="128"
+            data-height="554"
+            data-font-size="10"
+            data-direction="left"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-07 skyscraper-canvas"
+            id="skyscraper-01-07"
+            data-width="47"
+            data-height="554"
+            data-font-size="10"
+            data-direction="left"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-08 skyscraper-canvas"
+            id="skyscraper-01-08"
+            data-width="169"
+            data-height="255"
+            data-font-size="10"
+            data-direction="left"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <canvas class="skyscraper-01-09 skyscraper-canvas"
+            id="skyscraper-01-09"
+            data-width="47"
+            data-height="255"
+            data-font-size="10"
+            data-direction="left"
+            data-multiplier="0.5"
+            data-speed="50"
+            data-vanishing-speed="0.1"
+            data-bg-color="0,0,0"
+            data-default-color="FFFFFF"
+            data-rare-color="12FBFB"
+            data-rarity-rate="0.9"></canvas>
+
+    <form class="variables-of-skyscrapers left" id="skyscraper-form">
+      <div class="variable-block clearfix">
+        <span class="desc">font size (1-25) (repaint) (fontSize < 5 will slow PC)</span>
+        <input type="range" class="field" min="1" max="25" value="10" step="1" id="var-font-size"
+               data-parameter="font-size" data-property="fontSize">
+        <span class="value value-font-size" data-span-value="fontSize"></span>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">direction</span>
+        <select name="" class="field" id="var-direction" data-parameter="direction" data-property="direction">
+          <option value="up">up</option>
+          <option value="down" selected>down</option>
+          <option value="left">left</option>
+          <option value="right">right</option>
+        </select>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">multiplier (0.01-2) (repaint)</span>
+        <input class="field" type="range" min="0.01" max="2" step="0.01" value="1.5" id="var-multiplier"
+               data-parameter="multiplier" data-property="multiplier">
+        <span class="value value-multiplier" data-span-value="multiplier"></span>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">speed (10-100)</span>
+        <input class="field" type="range" min="10" max="100" step="5" value="50" id="var-speed" data-parameter="speed"
+               data-property="speed">
+        <span class="value value-speed" data-span-value="speed"></span>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">vanishing speed (0.01 - 0.5)</span>
+        <input class="field" type="range" min="0.01" max="0.5" step="0.01" value="0.1" id="var-vanishing-speed"
+               data-parameter="vanishing-speed" data-property="vanishingSpeed">
+        <span class="value value-vanishing-speed" data-span-value="vanishingSpeed"></span>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">bg color + default font shadow (0,0,0)</span>
+        <input class="field" type="text" id="var-bg-color" data-parameter="bg-color" data-property="bgColor" value="0,0,0">
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">default color (HEX)</span>
+        <input class="field" type="text" id="var-default-color" data-parameter="default-color" value="FFFFFF"
+               data-property="defaultColor">
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">rare color (HEX)</span>
+        <input class="field" type="text" id="var-rare-color" data-parameter="rare-color" value="12FBFB"
+               data-property="rareColor">
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">rarity rate of rare letters (0.5 - 1) (if 1 => no rare letters)</span>
+        <input class="field" type="range" min="0.5" max="1" step="0.01" value="0.95" id="var-rarity-rate"
+               data-parameter="rarity-rate" data-property="rarityRate">
+        <span class="value value-rarity-rate" data-span-value="rarityRate"></span>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">form position</span>
+        <div class="field">
+          <input type="radio" value="left" id="position-left" name="position" class="form-position hidden" checked>
+          <label class="position-label position-label-left" for="position-left">слева</label>
+          <input type="radio" value="right" id="position-right" name="position" class="form-position hidden">
+          <label class="position-label position-label-right" for="position-right">справа</label>
+        </div>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span class="desc">reset all settings (need reload page)</span>
+        <span class="field reset-button" id="reset-button">reset</span>
+      </div>
+
+      <div class="variable-block clearfix">
+        <span>show/hide - V</span>
+      </div>
+
+
+    </form>
+
+
+  </div>
+</div>
+
+
+<script src="js/rain.js"></script>
+</body>
+</html>
