@@ -431,6 +431,7 @@ function SkyscraperVariablesForm() {
 //параллельно меняем датасет у канваса и спан в форме, чтобы было видно цифровое значение
 SkyscraperVariablesForm.prototype.allSortOfListeners = function () {
   //делаю из-за проблем с областью видимости, руки бы мне отрубить
+	//надо было делать иначе изначально
 	var activeCanvasBlock = this.activeCanvas;
   var fontSizeSpanValue = this.fontSizeSpanValue;
   var multiplierSpanValue = this.multiplierSpanValue;
@@ -438,10 +439,10 @@ SkyscraperVariablesForm.prototype.allSortOfListeners = function () {
   var vanishingSpeedSpanValue = this.vanishingSpeedSpanValue;
   var rarityRateSpanValue = this.rarityRateSpanValue;
 
-	//todo ЛИСТЕНЕРЫ НЕ СКИДЫВАЮТСЯ ЧТО ЗА ХУЙНЯ ИСПРАВИТЬ
+	//todo листенеры не скидываются, надо было иначе писать изначально. поздно переделывать.
+	//проблем не приносит.
 	$(this.fontSizeInput).off('input');
 	this.fontSizeFunction = function () {
-		//ВОТ ЭТА ВОТ ХУЙНЯ ЧТО ЗА ПИЗДЕЦ
 		console.log(123);
 		if (activeCanvasBlock.canvas.classList.contains('active')) {
 			activeCanvasBlock.recalcVariables(this.dataset.parameter, this.value, this.dataset.property);
